@@ -9,7 +9,7 @@ export default function page() {
     <div className="flex flex-col justify-center items-center gap-5 mt-10">
       <div className="content w-full pl-7">
         <h5 className="text-xl text-left font-bold mb-2.5 -ml-5">
-          วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2568
+          วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2569
         </h5>
         <ul className="list-decimal leading-loose ">
           <li>
@@ -18,7 +18,7 @@ export default function page() {
           <li>
             แตะที่แบนเนอร์{" "}
             <span className="text-[#3a67e5] font-bold">
-              &quot;ยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2568&quot;
+              &quot;ยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2569&quot;
             </span>{" "}
             ใน LINE 
           </li>
@@ -31,15 +31,15 @@ export default function page() {
           <li>ตรวจสอบ เลขทะเบียนสมาชิก, ชื่อ-นามสกุล, สังกัด</li>
           <li>
             ตรวจสอบยอดคงเหลือ หุ้น ของคุณ ณ วันที่{" "}
-            <span className="font-bold">31 สิงหาคม 2568</span>
+            <span className="font-bold">30 กันยายน 2569</span>
           </li>
           <li>
             ตรวจสอบเลขที่สัญญาเงินกู้ และยอดคงเหลือแต่ละสัญญา ณ วันที่{" "}
-            <span className="font-bold">31 สิงหาคม 2568</span>
+            <span className="font-bold">30 กันยายน 2569</span>
           </li>
           <li>
             ตรวจสอบเลขที่บัญชีเงินฝาก และยอดคงเหลือแต่ละบัญชี ณ วันที่{" "}
-            <span className="font-bold">31 สิงหาคม 2568</span>
+            <span className="font-bold">30 กันยายน 2569</span>
           </li>
           <li className="list-none">
             <ol className="list-none -ml-4">
