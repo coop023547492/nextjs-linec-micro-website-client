@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2568",
+  title: "วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2569",
 };
 
 export default function page() {
