@@ -14,7 +14,7 @@ export default function page() {
       <Card>
         <CardHeader>
           <CardTitle className="text-center leading-relaxed">
-            คุณได้ทำการยืนยันยอดประจำปี 2568 เรียบร้อยแล้ว
+            คุณได้ทำการยืนยันยอดประจำปี 2569 เรียบร้อยแล้ว
           </CardTitle>
         </CardHeader>
         <CardContent className=" text-center">
