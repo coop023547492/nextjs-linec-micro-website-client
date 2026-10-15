@@ -13,7 +13,6 @@ import useAuditorMaster from "./hook/useAuditorMaster";
 
 // 1. ประกาศตัวแปรไว้ด้านบนสุด เพื่อให้ใช้ได้ครอบคลุมทั้งไฟล์
 const cfyear = process.env.NEXT_PUBLIC_CF_YEAR || "2569";
-const cfdayyear = process.env.NEXT_PUBLIC_CF_DAY_YEAR || "30 กันยายน 2569";
 
 export default function ConfirmDetail({
   isAuditor = false,
