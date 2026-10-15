@@ -8,13 +8,16 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
+const cfyear = process.env.NEXT_PUBLIC_CF_YEAR || "2569";
+const cfdayyear = process.env.NEXT_PUBLIC_CF_DAY_YEAR || "30 กันยายน 2569";
+
 export default function page() {
   return (
     <div className="mt-10">
       <Card>
         <CardHeader>
           <CardTitle className="text-center leading-relaxed">
-            คุณได้ทำการยืนยันยอดประจำปี 2569 เรียบร้อยแล้ว
+            คุณได้ทำการยืนยันยอดประจำปี {cfyear} เรียบร้อยแล้ว
           </CardTitle>
         </CardHeader>
         <CardContent className=" text-center">

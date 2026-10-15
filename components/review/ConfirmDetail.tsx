@@ -11,6 +11,10 @@ import { useState } from "react";
 import { Alert, AlertTitle } from "../ui/alert";
 import useAuditorMaster from "./hook/useAuditorMaster";
 
+// 1. ประกาศตัวแปรไว้ด้านบนสุด เพื่อให้ใช้ได้ครอบคลุมทั้งไฟล์
+const cfyear = process.env.NEXT_PUBLIC_CF_YEAR || "2569";
+const cfdayyear = process.env.NEXT_PUBLIC_CF_DAY_YEAR || "30 กันยายน 2569";
+
 export default function ConfirmDetail({
   isAuditor = false,
   memberId,
@@ -40,9 +44,13 @@ export default function ConfirmDetail({
     return <p>ไม่พบข้อมูลการตรวจสอบการยืนยันยอดหุ้น หนี้และเงินฝาก</p>;
 
   const now = new Date();
-  const isOpen =
-    now >= new Date(auditorMasterData.start_at) &&
-    now <= new Date(auditorMasterData.end_at);
+  // เป็นแบบนี้ (เพื่อให้ iOS อ่าน string วันที่ได้ถูกต้อง)
+const safeStartAt = auditorMasterData.start_at.replace(/-/g, '/');
+const safeEndAt = auditorMasterData.end_at.replace(/-/g, '/');
+
+const isOpen =
+  now >= new Date(safeStartAt) &&
+  now <= new Date(safeEndAt);
 
   if (!isOpen && !isAuditor)
     return (
@@ -52,7 +60,7 @@ export default function ConfirmDetail({
       >
         <AlertTitle>
           ขออภัย! ปัจจุบันอยู่นอกช่วงเวลาการยืนยันยอดประจำปี {""}
-          {new Date(auditorMasterData.end_at).getFullYear() + 543}{" "}
+          {new Date(safeEndAt).getFullYear() + 543}{" "}
           ซึ่งได้สิ้นสุดแล้ว
         </AlertTitle>
       </Alert>
@@ -210,7 +218,7 @@ const AlertAlreadyConfirm = () => {
     <Alert variant="destructive" className="md:w-max md:mx-auto print:hidden">
       <div className="flex justify-center items-center gap-2 flex-wrap text-center">
         <AlertCircleIcon />
-        <AlertTitle>คุณได้ทำการยืนยันยอดประจำปี 2569 เรียบร้อยแล้ว</AlertTitle>
+        <AlertTitle>คุณได้ทำการยืนยันยอดประจำปี {cfyear} เรียบร้อยแล้ว</AlertTitle>
       </div>
     </Alert>
   );

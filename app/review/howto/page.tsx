@@ -1,7 +1,12 @@
 import { Metadata } from "next";
 
+// 1. ประกาศตัวแปรไว้ด้านบนสุด เพื่อให้ใช้ได้ครอบคลุมทั้งไฟล์
+const cfyear = process.env.NEXT_PUBLIC_CF_YEAR || "2569";
+const cfdayyear = process.env.NEXT_PUBLIC_CF_DAY_YEAR || "30 กันยายน 2569";
+
+// 2. ใช้ Template Literals (``) เพื่อแทรกตัวแปรลงใน String ของ Metadata
 export const metadata: Metadata = {
-  title: "วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2569",
+  title: `วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี ${cfyear}`,
 };
 
 export default function page() {
@@ -9,7 +14,7 @@ export default function page() {
     <div className="flex flex-col justify-center items-center gap-5 mt-10">
       <div className="content w-full pl-7">
         <h5 className="text-xl text-left font-bold mb-2.5 -ml-5">
-          วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี 2569
+          วิธีการยืนยันยอด หุ้น หนี้ เงินฝาก ประจำปี ${cfyear}
         </h5>
         <ul className="list-decimal leading-loose ">
           <li>
@@ -31,15 +36,15 @@ export default function page() {
           <li>ตรวจสอบ เลขทะเบียนสมาชิก, ชื่อ-นามสกุล, สังกัด</li>
           <li>
             ตรวจสอบยอดคงเหลือ หุ้น ของคุณ ณ วันที่{" "}
-            <span className="font-bold">30 กันยายน 2569</span>
+            <span className="font-bold">{cfdayyear}</span>
           </li>
           <li>
             ตรวจสอบเลขที่สัญญาเงินกู้ และยอดคงเหลือแต่ละสัญญา ณ วันที่{" "}
-            <span className="font-bold">30 กันยายน 2569</span>
+            <span className="font-bold">{cfdayyear}</span>
           </li>
           <li>
             ตรวจสอบเลขที่บัญชีเงินฝาก และยอดคงเหลือแต่ละบัญชี ณ วันที่{" "}
-            <span className="font-bold">30 กันยายน 2569</span>
+            <span className="font-bold">{cfdayyear}</span>
           </li>
           <li className="list-none">
             <ol className="list-none -ml-4">
